@@ -61,8 +61,6 @@ void Directorios::mostrarContenido()
 
         QFileInfoList contenido = directorio.entryInfoList();
 
-        //qDebug() << info.lastModified().toString();
-
         foreach (const QFileInfo &info, contenido) {
             if(info.isWritable()==true){
                 escrito = "Si";
@@ -80,10 +78,7 @@ void Directorios::mostrarContenido()
                 qDebug() << "Última de creación:" << info.lastModified().toString();
                 */
 
-                ui->listWidget->addItem(info.fileName()+"   "+
-                                        direc+"     "+
-                                        escrito+"   "+
-                                        info.lastModified().toString());
+                ui->listWidget->addItem(info.fileName());
 
                 //ui->tableWidgetObj->setItem(ui->tableWidgetObj->rowCount() - 1, NOMBRE
                                             //new QTableWidgetItem(nombre));
@@ -94,7 +89,6 @@ void Directorios::mostrarContenido()
 
         }
     for(int i=2;i<cantidad;i++){
-       //*ui->listWidget->addItem(QString(directorio[i]));
         ui->cbCarpetas->addItem(QString(directorio[i]));
     }
 }
