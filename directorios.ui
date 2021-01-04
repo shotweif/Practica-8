@@ -247,7 +247,7 @@
      <rect>
       <x>240</x>
       <y>260</y>
-      <width>191</width>
+      <width>711</width>
       <height>211</height>
      </rect>
     </property>
@@ -255,27 +255,16 @@
      <item>
       <widget class="QListWidget" name="listWidget"/>
      </item>
+     <item>
+      <widget class="QListWidget" name="listWidget_3"/>
+     </item>
+     <item>
+      <widget class="QListWidget" name="listWidget_4"/>
+     </item>
+     <item>
+      <widget class="QListWidget" name="listWidget_5"/>
+     </item>
     </layout>
-   </widget>
-   <widget class="QTableWidget" name="tableWidgetObj">
-    <property name="geometry">
-     <rect>
-      <x>460</x>
-      <y>260</y>
-      <width>471</width>
-      <height>192</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QTableWidget" name="tableWidget">
-    <property name="geometry">
-     <rect>
-      <x>680</x>
-      <y>50</y>
-      <width>256</width>
-      <height>192</height>
-     </rect>
-    </property>
    </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>

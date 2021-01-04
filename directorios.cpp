@@ -11,10 +11,6 @@ Directorios::Directorios(QWidget *parent)
     QPushButton *ptr = ui->pbSalir;
     QStringList titulos;
 
-    ui->tableWidgetObj->selectColumn(4);
-    titulos << "Nombre" << "Es directorio" << "Se puede escribir" << "Última de creación";
-    ui->tableWidgetObj->setHorizontalHeaderLabels(titulos);
-
     QObject::connect(ptr,SIGNAL(clicked()),this,SLOT(close()));
 }
 
@@ -71,20 +67,15 @@ void Directorios::mostrarContenido()
                 direc = "Si";
             }else{
                 direc = "No";
-            }/*
-                qDebug() << "Nombre:" << info.fileName();
-                qDebug() << "Es directorio:" << info.isDir();
-                qDebug() << "Se puede escribir:" << info.isWritable();
-                qDebug() << "Última de creación:" << info.lastModified().toString();
-                */
+            }
 
                 ui->listWidget->addItem(info.fileName());
 
                 //ui->tableWidgetObj->setItem(ui->tableWidgetObj->rowCount() - 1, NOMBRE
-                                            //new QTableWidgetItem(nombre));
-                /*ui->listWDir->addItem(direc);
-                ui->listWEscr->addItem(escrito);
-                ui->listWFcha->addItem(info.lastModified().toString())*/
+                                           //new QTableWidgetItem(nombre));
+                ui->listWidget_3->addItem(direc);
+                ui->listWidget_4->addItem(escrito);
+                ui->listWidget_5->addItem(info.lastModified().toString());
 
 
         }
@@ -183,8 +174,6 @@ void Directorios::EliminarDirRestantes()
 //------------------------------------------------------
 void Directorios::on_pbCrear_clicked()
 {
-    ui->tableWidgetObj->insertRow(ui->tableWidgetObj->rowCount());
-
     crearDirectorio();
 }
 
